@@ -16,6 +16,7 @@
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"> </script>
 		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"> </script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"> </script>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>
 	
 	
@@ -44,10 +45,10 @@
 				</div>
 				<div class="collapse navbar-collapse" id="mainNavBar">
 					<ul class="nav nav-tab nav-justified">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="gallery.html">Collections</a></li> 	
-						<li><a href="services.html">Services</a></li>						
-						<li class="active"><a href="contact.html">Contact</a></li>	
+						<li><a href="index.php">Home</a></li>
+						<li><a href="gallery.php">Collections</a></li> 	
+						<li><a href="services.php">Services</a></li>						
+						<li class="active"><a href="contact.php">Contact</a></li>	
 					</ul>			
 				</div>
 			</div>		
@@ -114,7 +115,8 @@
 									<div class="col-sm-offset-2 col-sm-10">
 										 <button type="submit" name="fname" onsubmit="return validateForm()" class="btn btn-default">Submit</button>
 									</div>
-								</div>
+								 <div class="g-recaptcha" data-sitekey="6Ldsrw0UAAAAAJ76-56yX16JTjPk9NezNI_blD0a"></div>
+								</div>									
 							</form>
 						</div>
 					</div>
