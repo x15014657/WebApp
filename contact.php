@@ -104,9 +104,12 @@
 							<div class="form-group">
 								<div class="col-sm-offset-2 col-sm-10">
 									<button type="submit" name="fname" onsubmit="return validateForm()" class="btn btn-default">Submit</button>
+									
+									<div id="recaptcha">									
+									</div><div class="g-recaptcha" data-sitekey="6Ldsrw0UAAAAAJ76-56yX16JTjPk9NezNI_blD0a">
 								</div>
 							</div>
-							<div class="g-recaptcha" data-sitekey="6Ldsrw0UAAAAAJ76-56yX16JTjPk9NezNI_blD0a">
+							
 							</div>
 						</form>
 					</div>
