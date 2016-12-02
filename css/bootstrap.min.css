@@ -55,6 +55,9 @@ hr {
     border-width: 1px;
 } 
 
+.g-recaptcha{
+	margin:0 auto;
+}
 .padding{
 	
 	padding-top:20px;
