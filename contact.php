@@ -53,7 +53,22 @@
 			</div>		
 		</nav>
 		
-	
+	<?php
+		
+		
+				if(isset($_POST['email'])){
+					
+					
+					
+					
+					echo 'form sucessfully submitted';
+				}
+		
+		
+		
+		
+		
+		?>
 		
 		<div class="container">
 			<div class="row">
@@ -70,7 +85,7 @@
 									</p></div>
 						</div>	
 						<div class="row">
-							<form name="myForm" class="form-horizontal">
+							<form name="myForm" method='post' action='contact.php' class="form-horizontal">
 								<div class="form-group">
 									<label for="inputName" class="control-label col-sm-2" > Name:</label>
 										<div class="col-sm-10">
@@ -80,7 +95,7 @@
 								<div class="form-group">
 									<label for="inputE-mail" class="control-label col-sm-2">E-mail:</label>
 										<div class="col-sm-10">
-											<input type="email" class="form-control" id="inputE-mail" placeholder="Enter e-mail">
+											<input type="email" name=email class="form-control" id="inputE-mail" placeholder="Enter e-mail">
 										</div>
 								</div>
 								<div class="form-group">
