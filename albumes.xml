@@ -1,7 +1,8 @@
-
-  <CD>
-    <TITLE></TITLE>
-    <ARTIST></ARTIST>
+<?xml version="1.0" encoding="UTF-8" ?>
+<ALBUMES>
+<CD>
+    <TITLE>tttt</TITLE>
+    <ARTIST>aaa</ARTIST>
     <COUNTRY></COUNTRY>
     <COMPANY></COMPANY>
     <PRICE></PRICE>
@@ -39,5 +40,5 @@
     <PRICE></PRICE>
     <YEAR></YEAR>
   </CD>
-  <CD>
+  </ALBUMES>
     
