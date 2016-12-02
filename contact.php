@@ -58,103 +58,94 @@
 		</div>
 	</nav>
 
-		
-				if(isset($_POST['email'])){
-					
-					
-					
-					
-					echo 'form sucessfully submitted';
-				}
 
-		
-		?>
+	if(isset($_POST['email'])){ echo 'form sucessfully submitted'; } ?>
 
-		<div class="container">
-			<div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-8">
-					<div class="well">
-						<div class="well well-sm">
-							<div class="get">
-								<h3 class="text-centre">Contact us </h3>
-								<hr>
-								<p class="text-justified">Feel free to contact us by calling 0871389294 or by filling in the enquiry form bellow.
-									<br> .....
-								</p>
-							</div>
-						</div>
-						<div class="row">
-							<form name="myForm" method='post' action='contact.php' class="form-horizontal">
-									<div class="form-group">
-										<label for="inputName" class="control-label col-sm-2"> Name:</label>
-										<div class="col-sm-10">
-											<input type="text" size="20" class="form-control" id="inputName" placeholder="Enter name">
-										</div>
-									</div>
-									<div class="form-group">
-										<label for="inputE-mail" class="control-label col-sm-2">E-mail:</label>
-										<div class="col-sm-10">
-											<input type="email" name=email class="form-control" id="inputE-mail" placeholder="Enter e-mail">
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="control-label col-sm-2">Phone no:</label>
-										<div class="col-sm-10">
-											<input type="number" min="1" max="15" class="form-control" id="inputPhoneNumber" placeholder="Enter phone number">
-										</div>
-									</div>
-									<div class="form-group">
-										<label for="inputMessage" class="control-label col-sm-2">Message:</label>
-										<div class="col-sm-10">
-											<textarea onfocus="thanks();" class="form-control" rows="7" id="inputMessage" placeholder="Enter message"></textarea>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="col-sm-offset-2 col-sm-10">
-											<button type="submit" name="fname" onsubmit="return validateForm()" class="btn btn-default">Submit</button>
-										</div>
-									</div>								
-									<div class="g-recaptcha" data-sitekey="6Ldsrw0UAAAAAJ76-56yX16JTjPk9NezNI_blD0a">
-								</div>
-							</form>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<div class="well">
+					<div class="well well-sm">
+						<div class="get">
+							<h3 class="text-centre">Contact us </h3>
+							<hr>
+							<p class="text-justified">Feel free to contact us by calling 0871389294 or by filling in the enquiry form bellow.
+								<br> .....
+							</p>
 						</div>
 					</div>
+					<div class="row">
+						<form name="myForm" method='post' action='contact.php' class="form-horizontal" require_once( 'recaptchalib.php');   $publickey="your_public_key" ; // you got this from the signup page   echo recaptcha_get_html($publickey);>
+							<div class="form-group">
+								<label for="inputName" class="control-label col-sm-2"> Name:</label>
+								<div class="col-sm-10">
+									<input type="text" size="20" class="form-control" id="inputName" placeholder="Enter name">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputE-mail" class="control-label col-sm-2">E-mail:</label>
+								<div class="col-sm-10">
+									<input type="email" name=email class="form-control" id="inputE-mail" placeholder="Enter e-mail">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Phone no:</label>
+								<div class="col-sm-10">
+									<input type="number" min="1" max="15" class="form-control" id="inputPhoneNumber" placeholder="Enter phone number">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputMessage" class="control-label col-sm-2">Message:</label>
+								<div class="col-sm-10">
+									<textarea onfocus="thanks();" class="form-control" rows="7" id="inputMessage" placeholder="Enter message"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-2 col-sm-10">
+									<button type="submit" name="fname" onsubmit="return validateForm()" class="btn btn-default">Submit</button>
+								</div>
+							</div>
+							<div class="g-recaptcha" data-sitekey="6Ldsrw0UAAAAAJ76-56yX16JTjPk9NezNI_blD0a">
+							</div>
+						</form>
+					</div>
 				</div>
-				<div class="col-md-2"></div>
 			</div>
+			<div class="col-md-2"></div>
 		</div>
+	</div>
 
-		<div class="alt2">
-			<footer class="container-fluid text-center">
-				<h2 class="text-center"><em>Music-<span>Zone</span></em></h2>
-				<p class="text-justified">
-					Military Road, Rathmines, Dublin<br> Tel: 0871389294
-					<br>
-					<a href="mailto:cameliafarcas.cf@gmail.com"><span class="glyphicon glyphicon-envelope"></span></a>
-				</p>
-				<hr>
-				<p>&copy;2015 by Team J<br/></p>
-			</footer>
-		</div>
+	<div class="alt2">
+		<footer class="container-fluid text-center">
+			<h2 class="text-center"><em>Music-<span>Zone</span></em></h2>
+			<p class="text-justified">
+				Military Road, Rathmines, Dublin<br> Tel: 0871389294
+				<br>
+				<a href="mailto:cameliafarcas.cf@gmail.com"><span class="glyphicon glyphicon-envelope"></span></a>
+			</p>
+			<hr>
+			<p>&copy;2015 by Team J<br/></p>
+		</footer>
+	</div>
 
 
-		<script>
-			function thanks() {
-				alert("Thank you for visiting our site");
+	<script>
+		function thanks() {
+			alert("Thank you for visiting our site");
+		}
+
+		function validateForm() {
+			var x = document.forms["myForm"]["fname"].value;
+			if (x == null || x == "") {
+				alert("Name must be filled out");
+				return false;
 			}
+		}
+	</script>
 
-			function validateForm() {
-				var x = document.forms["myForm"]["fname"].value;
-				if (x == null || x == "") {
-					alert("Name must be filled out");
-					return false;
-				}
-			}
-		</script>
-
-		<script src="js/bootstrap.min.js">
-		</script>
+	<script src="js/bootstrap.min.js">
+	</script>
 </body>
 
 </html>
