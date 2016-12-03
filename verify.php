@@ -10,13 +10,13 @@
 
   if (!$resp->is_valid) {
     // What happens when the CAPTCHA was entered incorrectly
-    die ("The reCAPTCHA wasn't entered correctly. Go back and try it again." .
+    prompt("The reCAPTCHA wasn't entered correctly. Go back and try it again." .
          "(reCAPTCHA said: " . $resp->error . ")");
   } else {
-    // Your code here to handle a successful verification
+    onsubmit="return validateForm()" /
   }
-  ?>  $publickey = "6Ldsrw0UAAAAAJ76-56yX16JTjPk9NezNI_blD0a"; // you got this from the signup page
-          echo recaptcha_get_html($publickey);
-      			  ?>
+  ?>  $publickey = "6Ldsrw0UAAAAAJ76-56yX16JTjPk9NezNI_blD0a";
+        echo recaptcha_get_html($publickey);
+      	 ?>
 					<?php
 		
