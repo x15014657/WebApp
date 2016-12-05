@@ -9,6 +9,7 @@
 		<meta name="description" content="Video/Audio On-line Shop">
 		<meta name="keywords" content="Videos, Albumes, Music, Shop, On-line, Entertainment">
 		<meta name="author" content="Team J">
+		<meta name="google-signin-client_id" content="936123769398-o8i22vemkb0o032m5j9hh2a9fq880epf.apps.googleusercontent.com ">
 		
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -17,6 +18,7 @@
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"> </script>
 		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"> </script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"> </script>
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
 	</head>
 	
 	

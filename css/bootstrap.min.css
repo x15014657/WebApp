@@ -18,7 +18,12 @@
 		body {
 			background-color:#C63D0F ;
 		}
- }
+}.g-signin2{
+	margin:0 auto;
+	max-width: 100%;
+	max-height:auto;
+}
+
  a:link {
     color:#660000 ;
     background-color: transparent;
