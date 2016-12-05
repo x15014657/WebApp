@@ -23,7 +23,9 @@
 	max-width: 100%;
 	max-height:auto;
 }
-
+#so{
+	margin:0 auto;
+}
  a:link {
     color:#660000 ;
     background-color: transparent;

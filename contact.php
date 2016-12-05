@@ -10,7 +10,7 @@
 	<meta name="description" content="Video/Audio On-line Shop">
 	<meta name="keywords" content="Videos, Albumes, Music, Shop, On-line, Entertainment">
 	<meta name="author" content="Team J">
-	<meta name="google-signin-client_id" content="936123769398-o8i22vemkb0o032m5j9hh2a9fq880epf.apps.googleusercontent.com ">
+	<meta name="google-signin-client_id" content="936123769398-o8i22vemkb0o032m5j9hh2a9fq880epf.apps.googleusercontent.com">
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -27,15 +27,6 @@
 
 
 <body>
-	<div class="container-fluid">
-		<div class="row padding">
-			<div class="col-md-4"></div>
-			<div class="col-md-offset-1"></div>
-			<div class="col-md-2"><img src="img/logo-bird.png" alt="logo-video shop"></div>
-			<div class="col-md-offset-1"></div>
-			<div class="col-md-4"></div>
-		</div>
-	</div>
 
 
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -49,16 +40,33 @@
 						<span class="icon-bar"></span>
 					</button>
 			</div>
+
 			<div class="collapse navbar-collapse" id="mainNavBar">
-				<ul class="nav nav-tab nav-justified">
-					<li><a href="index.php">Home</a></li>
+				<ul class="nav nav-tabs nav-justified">
+					<li class="active"><a href="index.php">Home</a></li>
 					<li><a href="gallery.php">Collections</a></li>
-					<li><a href="services.php">Services</a></li>
-					<li class="active"><a href="contact.php">Contact</a></li>
+					<li><a href="services.php">Services</a>
+						<div class="g-signin2" data-onsuccess="onSignIn"></div>
+					</li>
+					<li><a href="contact.php">Contact</a><a href="http://webapp-x15014657654604.codeanyapp.com/contact.php" onclick="signOut();">Sign out</a> </li>
 				</ul>
 			</div>
 		</div>
 	</nav>
+
+	<br /><br />
+	<div class="container-fluid">
+		<div class="row padding">
+			<div class="col-md-4"></div>
+			<div class="col-md-offset-1"></div>
+			<div class="logo">
+				<div><img src="img/vinyl.png" alt="vinyl" class="vinyl" /><img src="img/logo-bird.png" alt="logo-renovation" /><img src="img/vinyl.png" alt="vinyl" class="vinyl" /></div>
+			</div>
+			<div class="col-md-offset-1"></div>
+			<div class="col-md-4"></div>
+		</div>
+	</div>
+
 
 
 	if(isset($_POST['email'])){ echo 'form sucessfully submitted'; } ?>
@@ -106,12 +114,13 @@
 							<div class="form-group">
 								<div class="col-sm-offset-2 col-sm-10">
 									<button type="submit" name="fname" onsubmit="return validateForm()" class="btn btn-default">Submit</button>
-									
-									<div id="recaptcha">									
-									</div><div class="g-recaptcha" data-sitekey="6Ldsrw0UAAAAAJ76-56yX16JTjPk9NezNI_blD0a">
+
+									<div id="recaptcha">
+									</div>
+									<div class="g-recaptcha" data-sitekey="6Ldsrw0UAAAAAJ76-56yX16JTjPk9NezNI_blD0a">
+									</div>
 								</div>
-							</div>
-							
+
 							</div>
 						</form>
 					</div>
@@ -150,6 +159,25 @@
 	</script>
 
 	<script src="js/bootstrap.min.js">
+	</script>
+
+	<script>
+		function onSignIn(googleUser) { 
+			var profile = googleUser.getBasicProfile(true); 
+			console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+			 
+			console.log('Name: ' + profile.getName()); 
+			console.log('Image URL: ' + profile.getImageUrl()); 
+			console.log('Email: ' + profile.getEmail());
+		}
+	</script>
+	<script>
+		function signOut(googleUser) {  
+			var auth2 = gapi.auth2.getAuthInstance();  
+			auth2.signOut().then(function() {   
+				console.log('User signed out.');  
+			}); 
+		}
 	</script>
 </body>
 
