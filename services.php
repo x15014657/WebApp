@@ -44,15 +44,16 @@
 				<ul class="nav nav-tabs nav-justified">
 					<li class="active"><a href="index.php">Home</a></li>
 					<li><a href="gallery.php">Collections</a></li>
-					<li><a href="services.php">Services</a>
-						<div class="g-signin2" data-onsuccess="onSignIn"></div>
-					</li>
-					<li><a href="contact.php">Contact</a><a href="http://webapp-x15014657654604.codeanyapp.com/" onclick="signOut();">Sign out</a> </li>
+					<li><a href="services.php">Services</a></li>
+					<li><a href="contact.php">Contact</a></li>
+					<li><a href="http://webapp-x15014657654604.codeanyapp.com/" onclick="signOut();">Sign out</a> <div class="g-signin2" data-onsuccess="onSignIn"></div></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-	<br /><br />
+	<br/><br/>
+	
+	
 	<div class="container-fluid">
 		<div class="row padding">
 			<div class="col-md-4"></div>
