@@ -28,17 +28,29 @@
 <body>
 
 
-	<div class="collapse navbar-collapse" id="mainNavBar">
-		<ul class="nav nav-tabs nav-justified">
-			<li class="active"><a href="index.php">Home</a></li>
-			<li><a href="gallery.php">Collections</a></li>
-			<li><a href="services.php">Services</a>
-				<div class="g-signin2" data-onsuccess="onSignIn"></div>
-			</li>
-			<li><a href="contact.php">Contact</a><a href="http://webapp-x15014657654604.codeanyapp.com/services.php" onclick="signOut();">Sign out</a> </li>
-		</ul>
-	</div>
-	</div>
+<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="contaianer-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+						<span class="sr-only"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+			</div>
+
+			<div class="collapse navbar-collapse" id="mainNavBar">
+				<ul class="nav nav-tabs nav-justified">
+					<li class="active"><a href="index.php">Home</a></li>
+					<li><a href="gallery.php">Collections</a></li>
+					<li><a href="services.php">Services</a>
+						<div class="g-signin2" data-onsuccess="onSignIn"></div>
+					</li>
+					<li><a href="contact.php">Contact</a><a href="http://webapp-x15014657654604.codeanyapp.com/" onclick="signOut();">Sign out</a> </li>
+				</ul>
+			</div>
+		</div>
 	</nav>
 	<br /><br />
 	<div class="container-fluid">
