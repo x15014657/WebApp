@@ -129,7 +129,9 @@
 							<hr>
 							<p class="text-justified">
 								<br> .....
-								<if(isset($_POST['email'])){ echo 'form sucessfully submitted'; } ?>
+							<?php
+								if(isset($_POST['email'])){ echo 'form sucessfully submitted'; }
+								?>
 							</p>
 						</div>
 				</div>
