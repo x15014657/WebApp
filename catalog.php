@@ -6,7 +6,7 @@ echo "123 $xml";
 
 foreach ($xml->children() as $child)
   {
-  echo "Child node: " . $child->TITLE . "<br>";
+  echo "Child node: " . $child. "<br>";
   }
 ?>
 

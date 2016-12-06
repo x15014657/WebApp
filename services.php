@@ -78,14 +78,24 @@
 		</div>
 	</div>
 
-	<?php
-		require 'catalog.php';
-		
-		?>
+	
 		<div class="container">
 			<div class="row padding">
 				<div class="col-md-1"></div>
-				<div class="col-md-10">
+						<div class="col-md-4">
+							<div class="well">
+								<?php
+						require 'catalog.php';
+								?>
+							</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="container">
+			<div class="row padding">
+				<div class="col-md-1"></div>
+				<div class="col-md-6">
 					<div class="well">
 						<h1 class="text-centre">Services</h1>
 						<hr>

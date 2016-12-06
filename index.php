@@ -77,7 +77,7 @@
 						<h1 class="text-centre" id="fade"> Welcome</h1>
 						<hr>
 						<h2> <em>Music-<span>Zone</span> </em> </h2>
-						<p class="text-justified"> is a locally owend and operated business that sales <span>music CD </span>as well as <span>handyman</span> services in Dublin and surroundings.</p>
+						<p class="text-justified"> is a locally owend and operated business that sales <span>music CD </span>as well as <span>music albumes</span> services in Dublin and surroundings.</p>
 						<p class="text-justified"> Our main priority is customer satisfaction under all aspects...
 
 						</p>
