@@ -66,19 +66,6 @@
 		</div>
 	</div>
 
-	<br /><br />
-	<div class="container-fluid">
-		<div class="row padding">
-			<div class="col-md-4"></div>
-			<div class="col-md-offset-1"></div>
-			<div class="logo">
-				<div><img src="img/vinyl.png" alt="vinyl" class="vinyl" /><img src="img/logo-bird.png" alt="logo-renovation" /><img src="img/vinyl.png" alt="vinyl" class="vinyl" /></div>
-			</div>
-			<div class="col-md-offset-1"></div>
-			<div class="col-md-4"></div>
-		</div>
-	</div>
-
 	<?php
 		require 'catalog.php';
 		
