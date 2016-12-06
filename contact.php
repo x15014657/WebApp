@@ -69,7 +69,7 @@
 
 
 
-	if(isset($_POST['email'])){ echo 'form sucessfully submitted'; } ?>
+	
 
 	<div class="container">
 		<div class="row">
@@ -124,6 +124,14 @@
 							</div>
 						</form>
 					</div>
+						<div class="get">
+							<h3 class="text-centre"> </h3>
+							<hr>
+							<p class="text-justified">
+								<br> .....
+								<if(isset($_POST['email'])){ echo 'form sucessfully submitted'; } ?>
+							</p>
+						</div>
 				</div>
 			</div>
 			<div class="col-md-2"></div>
