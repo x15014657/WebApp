@@ -22,6 +22,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js">
 	</script>
 	<script src='https://www.google.com/recaptcha/api.js'></script>
+	
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
@@ -67,10 +68,6 @@
 		</div>
 	</div>
 
-
-
-	if(isset($_POST['email'])){ echo 'form sucessfully submitted'; } ?>
-
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2"></div>
@@ -86,11 +83,11 @@
 						</div>
 					</div>
 					<div class="row">
-						<form name="myForm" method='post' action='contact.php' class="form-horizontal" require_once( 'recaptchalib.php');   $publickey="your_public_key" ; // you got this from the signup page   echo recaptcha_get_html($publickey);>
+						<form name="myForm" method='post' action='contact.php' class="form-horizontal" require_once( 'recaptchalib.php')   $publickey="6Ldsrw0UAAAAAJ76-56yX16JTjPk9NezNI_blD0a" >
 							<div class="form-group">
 								<label for="inputName" class="control-label col-sm-2"> Name:</label>
 								<div class="col-sm-10">
-									<input type="text" size="20" class="form-control" id="inputName" placeholder="Enter name">
+									<input type="text" maxlen="30" class="form-control" id="inputName" placeholder="Enter name">
 								</div>
 							</div>
 							<div class="form-group">
@@ -102,7 +99,7 @@
 							<div class="form-group">
 								<label class="control-label col-sm-2">Phone no:</label>
 								<div class="col-sm-10">
-									<input type="number" min="1" max="15" class="form-control" id="inputPhoneNumber" placeholder="Enter phone number">
+									<input type="number" maxlen="20" class="form-control" id="inputPhoneNumber" placeholder="Enter phone number">
 								</div>
 							</div>
 							<div class="form-group">
@@ -113,11 +110,8 @@
 							</div>
 							<div class="form-group">
 								<div class="col-sm-offset-2 col-sm-10">
-									<button type="submit" name="fname" onsubmit="return validateForm()" class="btn btn-default">Submit</button>
-
-									<div id="recaptcha">
-									</div>
-									<div class="g-recaptcha" data-sitekey="6Ldsrw0UAAAAAJ76-56yX16JTjPk9NezNI_blD0a">
+									<button type="submit" name="fname" onsubmit="return validateForm()" class="btn btn-default" if(isset($_POST['submit'])){ echo 'form sucessfully submitted'; } ?>Submit</button>
+									<div class="g-recaptcha" data-theme="dark" data-sitekey="6Ldsrw0UAAAAAJ76-56yX16JTjPk9NezNI_blD0a">
 									</div>
 								</div>
 
@@ -179,6 +173,11 @@
 			}); 
 		}
 	</script>
+	
+	
+	
+	
+	
 </body>
 
 </html>

@@ -22,6 +22,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js">
 	</script>
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	
 </head>
 
 
@@ -109,6 +110,7 @@
 		</footer>
 	</div>
 
+	
 
 	<script>
 		var petru = "Welcome to Music- Zone site";
