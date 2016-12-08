@@ -68,15 +68,59 @@
 			<div class="col-md-4"></div>
 		</div>
 	</div>
+			
+	<?php
+// define variables and set to empty values
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$name = $email = $gender = $comment = $website = "";
 
-<<<<<<< HEAD
-=======
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+    $nameErr = "Name is required";
+  } else {
+    $name = test_input($_POST["name"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+      $nameErr = "Only letters and white space allowed";
+    }
+  }
+  
+  if (empty($_POST["email"])) {
+    $emailErr = "Email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format";
+    }
+  }
+    
+  if (empty($_POST["phoneNo"])) {
+    $phoneNo = "000-0000-0000";
+  } else {
+    $phoneNo = test_input($_POST["phoneNo"]);
+    // check if phone number is valid (this regular expression also allows dashes in the URL)
+    if (!preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/",$phoneNo)) {
+      $websiteErr = "Invalid phone number";
+    }
+  }
+
+  if (empty($_POST["comment"])) {
+    $comment = "";
+  } else {
+    $comment = test_input($_POST["comment"]);
+  }
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
 
 
-	
-
->>>>>>> 0242fd5f63df9d646c7b08c980f7549132e166b8
-		
 		<div class="container">
 			<div class="row">
 				<div class="col-md-2"></div>
@@ -85,41 +129,41 @@
 						<div class="well well-sm">
 							<div class="get">
 								<h3 class="text-centre">Contact us </h3> <hr>
-									<p class="text-justified">Feel free to contact us by calling 0871389294 or 
-									by filling in the enquiry form bellow.
+									<p class="text-justified">
 									<br>
 									.....
 									</p></div>
 						</div>	
 						<div class="row">
-							<form name="myForm" class="form-horizontal">
+							<p><span class="error">* required field.</span></p>
+							<form method='post'  name="myForm" class="form-horizontal" action='<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>' >
 								<div class="form-group">
-									<label for="inputName" class="control-label col-sm-2" > Name:</label>
+									<label for="inputName" class="control-label col-sm-2" > *Name:</label>
 										<div class="col-sm-10">
-											<input type="text" size="20" class="form-control" id="inputName" placeholder="Enter name">
+											<input type="text" name='name' size="20" class="form-control" id="inputName" placeholder="Enter name" value='<?php echo $name;?>'>
 										</div>
 								</div>
 								<div class="form-group">
-									<label for="inputE-mail" class="control-label col-sm-2">E-mail:</label>
+									<label for="inputE-mail" class="control-label col-sm-2">*E-mail:</label>
 										<div class="col-sm-10">
-											<input type="email" class="form-control" id="inputE-mail" placeholder="Enter e-mail">
+											<input type="text" name='email' class="form-control" id="inputE-mail" placeholder="Enter e-mail" value="<?php echo $email;?>">
 										</div>
 								</div>
 								<div class="form-group">
-									<label class="control-label col-sm-2" >Phone no:</label>
+									<label class="control-label col-sm-2" >*Phone no:</label>
 										<div class="col-sm-10">
-											<input type="number" min="1" max="15" class="form-control" id="inputPhoneNumber" placeholder="Enter phone number">
+											<input type="number" name='phoneNo' min="1" max="15" class="form-control" id="inputPhoneNumber" placeholder="Enter phone number" value='<?php echo phoneNo;?>'> >
 										</div>
 								</div>	
 								<div class="form-group">
 									<label for="inputMessage" class="control-label col-sm-2">Message:</label>
 										<div class="col-sm-10">
-											<textarea onfocus="thanks();" class="form-control" rows="7" id="inputMessage" placeholder="Enter message"></textarea>
+											<textarea name='comment' onfocus="thanks();" class="form-control" rows="7" id="inputMessage" placeholder="Enter message"><?php echo $comment;?></textarea>
 										</div>
 								</div>
 								<div class="form-group">
 									<div class="col-sm-offset-2 col-sm-10">
-										 <button type="submit" name="fname" onsubmit="return validateForm()" class="btn btn-default">Submit</button>
+										 <button type="submit" name="submit" value='submit' class="btn btn-default">Submit</button>
 									</div>
 								</div>
 							</form>
@@ -129,7 +173,17 @@
 				<div class="col-md-2"></div>
 			</div>
 		</div>
-		
+		<?php
+echo "<h2>Your Input:</h2>";
+echo $name;
+echo "<br>";
+echo $email;
+echo "<br>";
+echo $phoneNo;
+echo "<br>";
+echo $comment;
+echo "<br>";
+?>
 		<div class="alt2">
 			<footer class="container-fluid text-center">
 				<h2 class="text-center"><em>Music-<span>Zone</span></em></h2>
@@ -145,22 +199,7 @@
 		</div>	
 		
 
-		<script>
-			function thanks()
-			{
-				alert("Thank you for visiting our site");
-			}
-			
-			function validateForm() {
-				var x = document.forms["myForm"]["fname"].value;
-				if (x == null || x == "") {
-					alert("Name must be filled out");
-					return false;
-				}
-			}
-			
-			
-		</script>
+	
 	
 		<script src="js/bootstrap.min.js"> </script>
 	</body>
