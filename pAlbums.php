@@ -22,13 +22,3 @@ foreach ($xml->cd as $cd)
 }  
 echo '</table>';
 ?>
-
-<TITLE>Roses In The Snow</TITLE>
-	<ARTIST>Emmylou Harris</ARTIST>
-	<COUNTRY>Spain</COUNTRY>
-	<R_LABEL>Warner Bros. Records</R_LABEL>
-	<PRICE>10.90</PRICE>
-	<YEAR>1980</YEAR>
-	<IMAGE>http://webapp-x15014657654604.codeanyapp.com/img/EmmyLouHarris.jpg</IMAGE>
-	<SUBSCRIBE><div class="g-ytsubscribe" data-channel="1000Magicians" data-layout="full" data-theme="dark" data-count="default"></div></SUBSCRIBE>
-	</CD>
