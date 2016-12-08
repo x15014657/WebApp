@@ -23,11 +23,14 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js">
 	</script>
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script src="https://apis.google.com/js/platform.js"></script>
 </head>
 
 
 <body>
 
+
+<div class="g-ytsubscribe" data-channel="GoogleDevelopers" data-layout="full" data-theme="dark" data-count="default" data-onytevent="onYtEvent"></div>
 
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="contaianer-fluid">
@@ -86,7 +89,7 @@
 			<div class="row padding">
 				<div class="col-md-3">
 					<a href="img/EmmyLouHarris.jpg" class="thumbnail" data-title="records" data-lightbox="example-set">
-						<img src="img/EmmyLouHarris.jpg" alt="Roses in the Snow" />
+						<img src="img/EmmyLouHarris.jpg" alt="Roses in the Snow" /><div class="g-ytsubscribe" data-channel="1000Magicians" data-layout="full" data-theme="dark" data-count="default"></div>
 					</a>
 				</div>
 				<div class="col-md-3">
@@ -109,22 +112,22 @@
 			<div class="row padding">
 				<div class="col-md-3">
 					<a href="img/HenryMancini.jpg" class="thumbnail" data-title="..." data-lightbox="example-set">
-						<img src="img/HenryMancini.jpg" alt="..." />
+						<img src="img/HenryMancini.jpg" alt="..." /><div class="g-ytsubscribe" data-channel="HenriManciniVEVO" data-layout="default" data-count="default"></div>
 					</a>
 				</div>
 				<div class="col-md-3">
 					<a href="img/FrancescaMichielin.jpg" class="thumbnail" data-title="..." data-lightbox="example-set">
-						<img src="img/FrancescaMichielin.jpg" alt="10" />
+						<img src="img/FrancescaMichielin.jpg" alt="10" /><div class="g-ytsubscribe" data-channel="francescamichielin" data-layout="full" data-theme="dark" data-count="default"></div>
 					</a>
 				</div>
 				<div class="col-md-3">
 					<a href="img/2Unlimited.jpg" class="thumbnail" data-title="" data-lightbox="example-set">
-						<img src="img/2Unlimited.jpg" alt="di20are" />
+						<img src="img/2Unlimited.jpg" alt="di20are" /><div class="g-ytsubscribe" data-channel="The2Unlimitedcom" data-layout="default" data-count="default"></div>
 					</a>
 				</div>
 				<div class="col-md-3">
 					<a href="img/Laleh.jpg" class="thumbnail" data-title="..." data-lightbox="example-set">
-						<img src="img/Laleh.jpg" alt="Laleh" />
+						<img src="img/Laleh.jpg" alt="Laleh" /><div class="g-ytsubscribe" data-channel="lalehofficial" data-layout="full" data-theme="dark" data-count="default"></div>
 					</a>
 				</div>
 			</div>
