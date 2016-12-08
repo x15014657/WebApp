@@ -45,21 +45,26 @@
 				</div>
 				<div class="collapse navbar-collapse" id="mainNavBar">
 					<ul class="nav nav-tab nav-justified">
-						<li><a href="index.html">Home</a></li> 
-						<li><a href="gallery.html">Collections</a></li>
-						<li class="active"><a href="services.html">Services</a></li> 
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="index.php">Home</a></li> 
+						<li><a href="gallery.php">Collections</a></li>
+						<li class="active"><a href="services.php">Services</a></li> 
+						<li><a href="contact.php">Contact</a></li>
 					</ul>
 				</div>
 			</div>		
 		</nav>
 
-		
+
+			
+	
 		<div class="container">
+			
 			<div class="row padding">
+				
 				<div class="col-md-1"></div>
 				<div class="col-md-10">
 					<div class="well">
+						<iframe width="450" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowtransparency="true" src="https://chatroll.com/embed/chat/musicstop-tradechat?id=9PiFOo2iu0I&platform=html"></iframe>
 						<h1 class="text-centre">Services</h1> <hr>
 							<p class="text-justified">We know your passionate for music....
 													</p>
