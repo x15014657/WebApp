@@ -15,7 +15,8 @@
 		
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"> </script>
 		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"> </script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"> </script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
 	</head>
 	
 	
@@ -32,34 +33,41 @@
 		</div>
 	
 		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="contaianer-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+		<div class="contaianer-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
 						<span class="sr-only"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-				
-				</div>
-				<div class="collapse navbar-collapse" id="mainNavBar">
-					<ul class="nav nav-tab nav-justified">
-						<li><a href="index.html">Home</a></li> 
-						<li><a href="gallery.html">Collections</a></li>
-						<li class="active"><a href="services.html">Services</a></li> 
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-				</div>
-			</div>		
-		</nav>
+			</div>
 
-		
+			<div class="collapse navbar-collapse" id="mainNavBar">
+				<ul class="nav nav-tabs nav-justified">
+					<li class="active"><a href="index.php">Home</a></li>
+					<li><a href="gallery.php">Collections</a></li>
+					<li><a href="services.php">Services</a></li>
+					<li><a href="contact.php">Contact</a></li>
+					<li><a href="http://webapp-x15014657654604.codeanyapp.com/" onclick="signOut();">Sign out</a> <div class="g-signin2" data-onsuccess="onSignIn"></div></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<br/><br/>
+
+
+			
+	
 		<div class="container">
+			
 			<div class="row padding">
+				
 				<div class="col-md-1"></div>
 				<div class="col-md-10">
 					<div class="well">
+						<iframe width="450" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowtransparency="true" src="https://chatroll.com/embed/chat/musicstop-tradechat?id=9PiFOo2iu0I&platform=html"></iframe>
 						<h1 class="text-centre">Services</h1> <hr>
 							<p class="text-justified">We know your passionate for music....
 													</p>
