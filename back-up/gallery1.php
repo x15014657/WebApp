@@ -87,32 +87,49 @@
 	<div class="container">
 		<div class="gallery">
 			<div class="row padding">
-			
-				<?php
+				<div class="col-md-3">
+					<a href="img/EmmyLouHarris.jpg" class="thumbnail" data-title="records" data-lightbox="example-set">
+						<img src="img/EmmyLouHarris.jpg" alt="Roses in the Snow" /><div class="g-ytsubscribe" data-channel="1000Magicians" data-layout="full" data-theme="dark" data-count="default"></div>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="img/Mad'house.jpg" class="thumbnail" data-title="records" data-lightbox="example-set">
+						<img src="img/Mad'house.jpg" alt="Absolutely Mad" />
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="img/LoveDeLuxe.jpg" class="thumbnail" data-title="..." data-lightbox="example-set">
+						<img src="img/LoveDeLuxe.jpg" alt="Again and Again" />
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="img/Survivor.jpg" class="thumbnail" data-title="..." data-lightbox="example-set">
+						<img src="img/Survivor.jpg" alt="Premonition" />
+					</a>
+				</div>
 
-$xml=simplexml_load_file("albums.xml");
-
-echo '<div>';
-foreach ($xml->cd as $cd)  
-{  
-   echo '<div>';
-   
-     
-   echo $cd['TITLE'], '  ';  
-   
-   echo $cd->ARTIST, '  ';  
-   echo $cd->COUNTRY, '<br />'; 
-   echo $cd->R_LABEL, '  ';  
-   echo $cd->PRICE, '<br />';
-   echo $cd->YEAR, '  ';
-   echo '<img src='.$CD->image.'/>';
-   echo '<scr='.$cd->SUBSCRIBE.'/>';
-   echo '</div>
-}  
-echo '</div>';
-?>
-			
-				
+			</div>
+			<div class="row padding">
+				<div class="col-md-3">
+					<a href="img/HenryMancini.jpg" class="thumbnail" data-title="..." data-lightbox="example-set">
+						<img src="img/HenryMancini.jpg" alt="..." /><div class="g-ytsubscribe" data-channel="HenriManciniVEVO" data-layout="default" data-count="default"></div>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="img/FrancescaMichielin.jpg" class="thumbnail" data-title="..." data-lightbox="example-set">
+						<img src="img/FrancescaMichielin.jpg" alt="10" /><div class="g-ytsubscribe" data-channel="francescamichielin" data-layout="full" data-theme="dark" data-count="default"></div>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="img/2Unlimited.jpg" class="thumbnail" data-title="" data-lightbox="example-set">
+						<img src="img/2Unlimited.jpg" alt="di20are" /><div class="g-ytsubscribe" data-channel="The2Unlimitedcom" data-layout="default" data-count="default"></div>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="img/Laleh.jpg" class="thumbnail" data-title="..." data-lightbox="example-set">
+						<img src="img/Laleh.jpg" alt="Laleh" /><div class="g-ytsubscribe" data-channel="lalehofficial" data-layout="full" data-theme="dark" data-count="default"></div>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
