@@ -55,7 +55,6 @@
 					<li class="active"><a href="index.php">Home</a></li>
 					<li><a href="gallery.php">Collections</a></li>
 					<li><a href="services.php">Services</a></li>
-					<li><a href="services2.php">Services</a></li>
 					<li><a href="contact.php">Contact</a></li>
 					<li><a href="http://webapp-x15014657654604.codeanyapp.com/" onclick="signOut();">Sign out</a> <div class="g-signin2" data-onsuccess="onSignIn"></div></li>
 				</ul>
