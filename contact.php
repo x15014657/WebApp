@@ -68,6 +68,13 @@
 		</div>
 	</div>
 
+<<<<<<< HEAD
+=======
+
+
+	
+
+>>>>>>> 0242fd5f63df9d646c7b08c980f7549132e166b8
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2"></div>
@@ -118,6 +125,14 @@
 							</div>
 						</form>
 					</div>
+						<div class="get">
+							<h3 class="text-centre"> </h3>
+							<hr>
+							<p class="text-justified">
+								<br> .....
+								<if(isset($_POST['email'])){ echo 'form sucessfully submitted'; } ?>
+							</p>
+						</div>
 				</div>
 			</div>
 			<div class="col-md-2"></div>

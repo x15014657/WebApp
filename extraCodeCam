@@ -1,0 +1,36 @@
+<div class="well">
+						<h1 class="text-centre">Services</h1>
+						<hr>
+						<p class="text-justified">We know your passionate for music....
+						</p>
+						<ul class="list-group">
+							<li class="list-group-item list-group-item-success">
+								<h2>Can't Find Something Online?</h2>
+								<hr>
+								<ul>
+									<li>We have specialist music collectors and collaborators that for a small fee will help you build and grow your collection!</li>
+								</ul>
+							</li>
+							<li class="list-group-item list-group-item-info">
+								<h2>Members Auctions</h2>
+								<hr>
+								<ul>
+									<li>If you join up to our mailing program you will be allowed access to special onine auctions. Some rare items can be found here!!!</li>
+								</ul>
+							</li>
+							<li class="list-group-item list-group-item-warning">
+								<h2>Trade!!!</h2>
+								<hr>
+								<ul>
+									<li>We will be happy to trade all cd's, cassette tapes, vinyls and a-tracks!!! (Some T&C's Apply)</li>
+								</ul>
+							</li>
+							<li class="list-group-item list-group-item-danger">
+								<h2>Spread The Word!!!</h2>
+								<hr>
+								<ul>
+									<li>Get 10 friends to sign up and use our service and you each wi receive a &euro;20 off your next purchase (T&C's Apply)</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
