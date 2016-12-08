@@ -45,7 +45,7 @@
 			<div class="collapse navbar-collapse" id="mainNavBar">
 				<ul class="nav nav-tabs nav-justified">
 					<li class="active"><a href="index.php">Home</a></li>
-					<li><a href="gallery.php">Collections</a></li>
+					<li><a href="collection.php">Collections</a></li>
 					<li><a href="services.php">Services</a></li>
 
 					<li><a href="contact.php">Contact</a></li>

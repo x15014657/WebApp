@@ -25,7 +25,7 @@
 			<div class="row padding">
 				<div class="col-md-4"></div>
 				<div class="col-md-offset-1"></div>
-				<div class="logo"><div><img src="img/vinyl.png" alt="vinyl" class="vinyl" /><img src="img/logo-bird.png" alt="logo-renovation" />" /><img src="img/vinyl.png" alt="vinyl" class="vinyl" /></div>
+				<div class="logo"><div><img src="img/vinyl.png" alt="vinyl" class="vinyl" /><img src="img/logo-bird.png" alt="logo-renovation" /><img src="img/vinyl.png" alt="vinyl" class="vinyl" /></div>
 				</div>
 				<div class="col-md-offset-1"></div>
 				<div class="col-md-4"></div>
@@ -47,7 +47,7 @@
 			<div class="collapse navbar-collapse" id="mainNavBar">
 				<ul class="nav nav-tabs nav-justified">
 					<li class="active"><a href="index.php">Home</a></li>
-					<li><a href="gallery.php">Collections</a></li>
+					<li><a href="collection.php">Collections</a></li>
 					<li><a href="services.php">Services</a></li>
 					<li><a href="contact.php">Contact</a></li>
 					<li><a href="http://webapp-x15014657654604.codeanyapp.com/" onclick="signOut();">Sign out</a> <div class="g-signin2" data-onsuccess="onSignIn"></div></li>
