@@ -71,8 +71,8 @@
 			
 	<?php
 // define variables and set to empty values
-$nameErr = $emailErr = $genderErr = $websiteErr = "";
-$name = $email = $gender = $comment = $website = "";
+$nameErr = $emailErr = $phoneNoErr = $commentErr = "";
+$name = $email  = $phoneNo = $comment = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
@@ -152,7 +152,7 @@ function test_input($data) {
 								<div class="form-group">
 									<label class="control-label col-sm-2" >*Phone no:</label>
 										<div class="col-sm-10">
-											<input type="number" name='phoneNo' min="1" max="15" class="form-control" id="inputPhoneNumber" placeholder="Enter phone number" value='<?php echo phoneNo;?>'> >
+											<input type="number" name='phoneNo' min="1" max="15" class="form-control" id="inputPhoneNumber" placeholder="Enter phone number" value='<?php echo $phoneNo;?>'> >
 										</div>
 								</div>	
 								<div class="form-group">
