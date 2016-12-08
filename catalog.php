@@ -6,7 +6,7 @@ echo  $xml ->getName() . "<br>";
 
 foreach ($xml->children() as $child)
   {
-  echo $child->getName() . ":" . $child . "<br>";
+  echo $child->getName() . ":" . $child . $child->getChildren() . ":" . "<br>";
   }
 ?>
 
