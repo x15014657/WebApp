@@ -108,13 +108,13 @@
 			<footer class="container-fluid text-center">
 				<h2 class="text-center"><em>Music-<span>Zone</span></em></h2>
 					<p class="text-justified">
-											Military Road, Rathmines, Dublin<br>
+											Dublin<br>
 											Tel: 0871389294
 											<br>
 					<a href="mailto:cameliafarcas.cf@gmail.com"><span class="glyphicon glyphicon-envelope"></span></a>
 					</p>
 				<hr>
-				<p>&copy;2015 by Team J<br/></p>
+				<p>&copy;2016 by Team J<br/></p>
 			</footer>
 		</div>	
 		
