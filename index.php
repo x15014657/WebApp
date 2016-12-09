@@ -31,11 +31,12 @@
 		<div class="row padding">
 			<div class="col-md-4"></div>
 			<div class="col-md-offset-1"></div>
-			<div class="col-md-2"><img src="img/logo-bird.png" alt="logo-video shop" /></div>
+			<div class="logo">
+				<div><img src="img/vinyl.png" alt="vinyl" class="vinyl" /><img src="img/logo-bird.png" alt="logo-renovation" /><img src="img/vinyl.png" alt="vinyl" class="vinyl" /></div>
+			</div>
 			<div class="col-md-offset-1"></div>
 			<div class="col-md-4"></div>
 		</div>
-
 	</div>
 
 	<nav class="navbar navbar-default navbar-fixed-top">
