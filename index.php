@@ -64,17 +64,17 @@
 	
 	
 	<div class="container">
-		<div class="row padding">
-			<div class="col-md-8">
+		<!--<div class="row padding">-->
+			<div class="col-md-12">
 				<img class="img-thumbnail img-responsive" src="img/music.jpg" alt="home page photo" />
 			</div>
 
 
 
 
-			<div class="col-md-4">
+			<!--<div class="col-md-10">
 				<div class="well">
-					<div class="welcome">
+				<!--	<div class="welcome">
 						<h1 class="text-centre" id="fade"> Welcome</h1>
 						<hr>
 						<h2> <em>Music-<span>Zone</span> </em> </h2>
@@ -83,8 +83,8 @@
 
 						</p>
 					</div>
-				</div>
-				<div class="well">
+				</div>-->
+				<!--<div class="well">
 					<blockquote>
 						<p class="text-justified"> Testimonial......</p>
 						<footer>Aidan Maher<cite title="ID design">owner at ID design </cite></footer>
@@ -92,14 +92,14 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 
 
 	<div class="alt2">
 		<footer class="container-fluid text-center">
 			<h2 class="text-center"><em>Music-<span>Zone</span></em></h2>
 			<p class="text-justified">
-				Military Road, Rathmines, Dublin<br> Tel: 0871389294
+			 Dublin<br> Tel: 0871389294
 
 				<br>
 				<a href="mailto:cameliafarcas.cf@gmail.com"><span class="glyphicon glyphicon-envelope"></span></a>
@@ -112,11 +112,11 @@
 	
 
 	<script>
-		var petru = "Welcome to Music- Zone site";
+		var teamJ = "Welcome to Music- Zone site";
 
 		function intro() {
 
-			alert(petru);
+			alert(teamJ);
 		}
 
 		function getElements() {

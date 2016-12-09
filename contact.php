@@ -136,10 +136,9 @@ function test_input($data) {
 						<div class="well well-sm">
 							<div class="get">
 								<h3 class="text-centre">Contact us </h3> <hr>
-									<p class="text-justified">
-									<br>
-									.....
-									</p></div>
+									
+									
+						</div>
 						</div>	
 						<div class="row">
 							<p><span class="error">* required field.</span></p>
@@ -173,12 +172,16 @@ function test_input($data) {
 										 <button type="submit" name="submit" id="submit" value='submit' class="btn btn-default">Submit</button>
 									</div>
 								</div>
-								<div class="well well-sm">
+								
+								
+								 <div class="col-md-4"></div>
+				 <div class="col-md-4">
+			<div class="well well-sm">
 							<div class="get">
 								<div id="dialog" title="Basic dialog">
 											<?php
 										if ($nameErr || $emailErr || $phoneNoErr || $commentErr ){
-										echo "<h2>Your Input:</h2>"; 
+										
 											echo $nameErr;
 											echo "<br>";
 											echo $emailErr;
@@ -191,7 +194,12 @@ function test_input($data) {
 											?>
 								</div>
 							</div>
-								</div>
+								</div> 
+					 
+				 </div>
+			 	<div class="col-md-4"></div>
+			
+								
 							</form>
 						</div>
 					</div>
@@ -201,19 +209,22 @@ function test_input($data) {
 			</div>
 		</div>
 	
+	 
+			
+
  
 		
 		<div class="alt2">
 			<footer class="container-fluid text-center">
 				<h2 class="text-center"><em>Music-<span>Zone</span></em></h2>
 					<p class="text-justified">
-											Military Road, Rathmines, Dublin<br>
+									Dublin<br>
 											Tel: 0871389294
 											<br>
 					<a href="mailto:x15014657@student.ncirl.ie"><span class="glyphicon glyphicon-envelope"></span></a>
 					</p>
 				<hr>
-				<p>&copy;2015 by Team J<br/></p>
+				<p>&copy;2016 by Team J<br/></p>
 			</footer>
 		</div>	
 		

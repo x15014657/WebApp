@@ -87,7 +87,10 @@
 	<div class="container">
 		<div class="gallery">
 			<div class="row padding">
+				<div class="col-md-12">
 				
+					
+			
 						<?php
 
 $xml=simplexml_load_file("albums.xml");
@@ -107,106 +110,65 @@ foreach ($xml->cd as $cd)
    echo '<img class="img-responsive" src="'.$cd->IMAGE.'"/>';
    echo $cd->SUBSCRIBE;
    echo '</div>';
-	
-  
 }  
-
 ?>
-
-	
-				</div>
-			
-				<!--<div class="col-md-3">
 					
-				</div>
-				<div class="col-md-3">
-					
-				</div>
-				<div class="col-md-3">
-					
-				</div>-->
-
-			<!--</div>
-			<div class="row padding">
-				<div class="col-md-3">
-					
-				</div>
-				<div class="col-md-3">
-					
-				</div>
-				<div class="col-md-3">
-					
-				</div>
-				<div class="col-md-3">
-					
-				</div>-->
-			</div>
+			</div>		
 		</div>
 	</div>
-
+	</div>
+	</div>
+	
+	<div class="container">
+	<div class="well">
+		<div id="subscribe">
+			
+	
 	<div class="section group">
 	<div class="col span_1_of_12">
-
-	</div>
-		
+	</div>	
 	<div class="col span_1_of_12">
-	
 	</div>
-		
 	<div class="col span_1_of_12">
 	<div class="g-ytsubscribe" data-channel="1000Magicians" data-layout="full" data-theme="dark" data-count="default" ></div>
 	</div>
-		
 	<div class="col span_1_of_12">
-	
 	</div>
-		
 	<div class="col span_1_of_12">
 	 <div class="g-ytsubscribe" data-channel="francescaMichielin" data-layout="full" data-theme="dark" data-count="default"></div>
 	</div>
-		
 	<div class="col span_1_of_12">
-
 	</div>
-		
 	<div class="col span_1_of_12">
 	<div class="g-ytsubscribe" data-channel="the2unlimitedcom" data-layout="full" data-theme="dark" data-count="default"></div>
 	</div>
-		
 	<div class="col span_1_of_12">
-
 	</div>
-		
 	<div class="col span_1_of_12">
 	<div class="g-ytsubscribe" data-channel="lalehofficial" data-layout="full" data-theme="dark" data-count="default"></div>
 	</div>
-		
 	<div class="col span_1_of_12">
-
 	</div>
-		
 	<div class="col span_1_of_12">
-
 	</div>
-		
 	<div class="col span_1_of_12">
-
+	</div>	
 	</div>
-		
-</div>
-	
+	</div>
+	</div>
+	</div>
 
 	
 	<div class="alt2">
 		<footer class="container-fluid text-center">
 			<h2 class="text-center"><em>Music-<span>Zone</span></em></h2>
 			<p class="text-justified">
-				Military Road, Rathmines, Dublin<br/> Tel: 0871389294
+				 Dublin<br/> Tel: 0871389294
 				<br/>
 				<a href="mailto:cameliafarcas.cf@gmail.com"><span class="glyphicon glyphicon-envelope"></span></a>
 			</p>
 			<hr/>
-			<p>2015 br Team J<br/></p>
+			<p>2016 br Team J<br/></p>
 		</footer>
 	</div>
 
