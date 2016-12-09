@@ -115,6 +115,7 @@ foreach ($xml->cd as $cd)
 
 	
 				</div>
+			
 				<!--<div class="col-md-3">
 					
 				</div>
@@ -143,6 +144,19 @@ foreach ($xml->cd as $cd)
 		</div>
 	</div>
 
+	<div class="container">
+		<div class="g-ytsubscribe" data-channel="1000Magicians" data-layout="full" data-theme="dark" data-count="default" "           "></div>
+
+    <div class="g-ytsubscribe" data-channel="francescaMichielin" data-layout="full" data-theme="dark" data-count="default"></div>
+	
+			<div class="g-ytsubscribe" data-channel="the2unlimitedcom" data-layout="full" data-theme="dark" data-count="default"></div>
+		
+			<div class="g-ytsubscribe" data-channel="lalehofficial" data-layout="full" data-theme="dark" data-count="default">
+	
+	
+	
+	
+	
 	<div class="alt2">
 		<footer class="container-fluid text-center">
 			<h2 class="text-center"><em>Music-<span>Zone</span></em></h2>
