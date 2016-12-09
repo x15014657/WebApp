@@ -2,11 +2,9 @@
 
 $xml=simplexml_load_file("albums.xml");
 
-echo '<table border ="2" >';
+
 foreach ($xml->cd as $cd)  
 {  
-   echo '<tr>';
-  echo '<td>';
    
      
    echo $cd['id'], '  ';  
@@ -16,10 +14,11 @@ foreach ($xml->cd as $cd)
    echo $cd->R_LABEL, '  ';  
    echo $cd->PRICE, '<br />';
    echo $cd->YEAR, '  ';
-   echo '<img src='.$CD->IMAGE.'/>';
+   echo '<img src='.$cd->IMAGE.'/>';
    echo $cd->SUBSCRIBE.'/>';
-   echo '</td>';
-   echo '</tr>';
+  
 }  
-echo '</table>';
+
 ?>
+
+

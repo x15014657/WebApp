@@ -105,6 +105,11 @@ h1{
 	display:none;
 	
 }
+
+#dialog{
+	
+	background-color:pink;
+}
 .vinyl{
 	width:150px;
 	height:auto;

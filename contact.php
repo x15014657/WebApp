@@ -21,6 +21,7 @@
 	</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js">
 	</script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script src='https://www.google.com/recaptcha/api.js'></script>
 	
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -28,7 +29,13 @@
 
 
 <body>
-
+  <script>
+  
+    $("#submit").click(function(){
+			( "#dialog" ).dialog();
+		});
+ 
+  </script>
 
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="contaianer-fluid">
@@ -45,7 +52,7 @@
 			<div class="collapse navbar-collapse" id="mainNavBar">
 				<ul class="nav nav-tabs nav-justified">
 					<li class="active"><a href="index.php">Home</a></li>
-					<li><a href="collection.php">Collections</a></li>
+					<li><a href="collections.php">Collections</a></li>
 					<li><a href="services.php">Services</a></li>
 
 					<li><a href="contact.php">Contact</a></li>
@@ -163,27 +170,39 @@ function test_input($data) {
 								</div>
 								<div class="form-group">
 									<div class="col-sm-offset-2 col-sm-10">
-										 <button type="submit" name="submit" value='submit' class="btn btn-default">Submit</button>
+										 <button type="submit" name="submit" id="submit" value='submit' class="btn btn-default">Submit</button>
 									</div>
+								</div>
+								<div class="well well-sm">
+							<div class="get">
+								<div id="dialog" title="Basic dialog">
+											<?php
+										if ($nameErr || $emailErr || $phoneNoErr || $commentErr ){
+										echo "<h2>Your Input:</h2>"; 
+											echo $nameErr;
+											echo "<br>";
+											echo $emailErr;
+											echo "<br>";
+											echo $phoneNoErr;
+											echo "<br>";
+											echo $commentErr;
+											echo "<br>";
+										}
+											?>
+								</div>
+							</div>
 								</div>
 							</form>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-2"></div>
+				<div class="col-md-2">
+				</div>
 			</div>
 		</div>
-		<?php
-echo "<h2>Your Input:</h2>";
-echo $name;
-echo "<br>";
-echo $email;
-echo "<br>";
-echo $phoneNo;
-echo "<br>";
-echo $comment;
-echo "<br>";
-?>
+	
+ 
+		
 		<div class="alt2">
 			<footer class="container-fluid text-center">
 				<h2 class="text-center"><em>Music-<span>Zone</span></em></h2>
