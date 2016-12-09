@@ -144,18 +144,58 @@ foreach ($xml->cd as $cd)
 		</div>
 	</div>
 
-	<div class="container">
-		<div class="g-ytsubscribe" data-channel="1000Magicians" data-layout="full" data-theme="dark" data-count="default" "           "></div>
+	<div class="section group">
+	<div class="col span_1_of_12">
 
-    <div class="g-ytsubscribe" data-channel="francescaMichielin" data-layout="full" data-theme="dark" data-count="default"></div>
-	
-			<div class="g-ytsubscribe" data-channel="the2unlimitedcom" data-layout="full" data-theme="dark" data-count="default"></div>
+	</div>
 		
-			<div class="g-ytsubscribe" data-channel="lalehofficial" data-layout="full" data-theme="dark" data-count="default">
+	<div class="col span_1_of_12">
 	
+	</div>
+		
+	<div class="col span_1_of_12">
+	<div class="g-ytsubscribe" data-channel="1000Magicians" data-layout="full" data-theme="dark" data-count="default" ></div>
+	</div>
+		
+	<div class="col span_1_of_12">
 	
+	</div>
+		
+	<div class="col span_1_of_12">
+	 <div class="g-ytsubscribe" data-channel="francescaMichielin" data-layout="full" data-theme="dark" data-count="default"></div>
+	</div>
+		
+	<div class="col span_1_of_12">
+
+	</div>
+		
+	<div class="col span_1_of_12">
+	<div class="g-ytsubscribe" data-channel="the2unlimitedcom" data-layout="full" data-theme="dark" data-count="default"></div>
+	</div>
+		
+	<div class="col span_1_of_12">
+
+	</div>
+		
+	<div class="col span_1_of_12">
+	<div class="g-ytsubscribe" data-channel="lalehofficial" data-layout="full" data-theme="dark" data-count="default"></div>
+	</div>
+		
+	<div class="col span_1_of_12">
+
+	</div>
+		
+	<div class="col span_1_of_12">
+
+	</div>
+		
+	<div class="col span_1_of_12">
+
+	</div>
+		
+</div>
 	
-	
+
 	
 	<div class="alt2">
 		<footer class="container-fluid text-center">
