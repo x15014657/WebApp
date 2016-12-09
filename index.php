@@ -62,7 +62,21 @@
 		</div>
 	</nav>
 	
-	
+	<div class="container">
+		<div class="row padding">
+			<div class="col-md-12">
+				<div class="well">
+					<div class="welcome">
+						<h1 class="text-centre" id="fade"> Welcome to Music Zone</h1>
+						<hr>
+					</div>
+			
+				</div>
+			</div>
+		</div>	
+	</div>
+			
+			
 	<div class="container">
 		<!--<div class="row padding">-->
 			<div class="col-md-12">
