@@ -90,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
       $nameErr = "Only letters and white space allowed";
     }
-  }
+	}
   
   if (empty($_POST["email"])) {
     $emailErr = "Email is required";
@@ -159,7 +159,7 @@ function test_input($data) {
 								<div class="form-group">
 									<label class="control-label col-sm-2" >*Phone no:</label>
 										<div class="col-sm-10">
-											<input type="number" name='phoneNo' min="1" max="15" class="form-control" id="inputPhoneNumber" placeholder="Enter phone number" value='<?php echo $phoneNo;?>'> >
+											<input type="number" name='phoneNo' maxlength="15" class="form-control" id="inputPhoneNumber" placeholder="Enter phone number" value='<?php echo $phoneNo;?>'> >
 										</div>
 								</div>	
 								<div class="form-group">
