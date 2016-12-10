@@ -36,6 +36,15 @@
 		});
  
   </script>
+	<!--<script>
+	 $('#contactForm').on('submit', function() {
+    $(this).each(function() {
+         this.reset();
+    });
+});
+
+	</script>	--> <!--this is a piece of code to reset the form...is not working...if it doesn't help you delete it please -->
+					
 
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="contaianer-fluid">
@@ -78,8 +87,8 @@
 			
 	<?php
 // define variables and set to empty values
-$nameErr = $emailErr = $phoneNoErr = $commentErr = "";
-$name = $email  = $phoneNo = $comment = "";
+$nameErr = $emailErr = $commentErr = "";
+$name = $email  = $comment = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
@@ -101,17 +110,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $emailErr = "Invalid email format";
     }
   }
-    
-  if (empty($_POST["phoneNo"])) {
-    $phoneNo = "000-0000-0000";
-  } else {
-    $phoneNo = test_input($_POST["phoneNo"]);
-    // check if phone number is valid (this regular expression also allows dashes in the URL)
-    if (!preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/",$phoneNo)) {
-      $websiteErr = "Invalid phone number";
-    }
-  }
-
+ 
   if (empty($_POST["comment"])) {
     $comment = "";
   } else {
@@ -126,8 +125,6 @@ function test_input($data) {
   return $data;
 }
 ?>
-
-
 		<div class="container">
 			<div class="row">
 				<div class="col-md-2"></div>
@@ -136,31 +133,29 @@ function test_input($data) {
 						<div class="well well-sm">
 							<div class="get">
 								<h3 class="text-centre">Contact us </h3> <hr>
-									
-									
 						</div>
 						</div>	
+						
 						<div class="row">
-							<p><span class="error">* required field.</span></p>
-							<form method='post'  name="myForm" class="form-horizontal" action='<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>' >
+						
+							<form method='post' id="contactForm"  name="myForm" class="form-horizontal" action='<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>' >
 								<div class="form-group">
-									<label for="inputName" class="control-label col-sm-2" > *Name:</label>
+									<label for="inputName" class="control-label col-sm-2" > Name:</label>
 										<div class="col-sm-10">
 											<input type="text" name='name' size="20" class="form-control" id="inputName" placeholder="Enter name" value='<?php echo $name;?>'>
+											
+  											<br><br>
 										</div>
 								</div>
 								<div class="form-group">
-									<label for="inputE-mail" class="control-label col-sm-2">*E-mail:</label>
+									<label for="inputE-mail" class="control-label col-sm-2">E-mail:</label>
 										<div class="col-sm-10">
 											<input type="text" name='email' class="form-control" id="inputE-mail" placeholder="Enter e-mail" value="<?php echo $email;?>">
-										</div>
+												
+  												<br><br>
+									</div>
 								</div>
-								<div class="form-group">
-									<label class="control-label col-sm-2" >*Phone no:</label>
-										<div class="col-sm-10">
-											<input type="number" name='phoneNo' min="1" max="15" class="form-control" id="inputPhoneNumber" placeholder="Enter phone number" value='<?php echo $phoneNo;?>'> >
-										</div>
-								</div>	
+								
 								<div class="form-group">
 									<label for="inputMessage" class="control-label col-sm-2">Message:</label>
 										<div class="col-sm-10">
@@ -169,48 +164,41 @@ function test_input($data) {
 								</div>
 								<div class="form-group">
 									<div class="col-sm-offset-2 col-sm-10">
-										 <button type="submit" name="submit" id="submit" value='submit' class="btn btn-default">Submit</button>
+										 <button type="submit" name="" id="submit" value='submit' class="btn btn-default">Submit</button>
 									</div>
 								</div>
 								
 								
 								 <div class="col-md-4"></div>
-				 <div class="col-md-4">
-			<div class="well well-sm">
-							<div class="get">
-								<div id="dialog" title="Basic dialog">
-											<?php
-										if ($nameErr || $emailErr || $phoneNoErr || $commentErr ){
-										
-											echo $nameErr;
-											echo "<br>";
-											echo $emailErr;
-											echo "<br>";
-											echo $phoneNoErr;
-											echo "<br>";
-											echo $commentErr;
-											echo "<br>";
-										}
-											?>
-								</div>
-							</div>
-								</div> 
-					 
-				 </div>
-			 	<div class="col-md-4"></div>
-			
-								
+				 				<div class="col-md-4">
+									<div class="well well-sm">
+										<div class="get">
+											<div id="dialog" title="Basic dialog">
+												<?php
+													if ($nameErr || $emailErr || $commentErr ){
+														echo $nameErr;
+														echo "<br>";
+														echo $emailErr;
+														echo "<br>";	
+														echo $commentErr;
+														echo "<br>";
+														}
+												?>
+										</div>
+										</div>
+									</div>
+				 				</div> <!--last div with error message-->
+			 					<div class="col-md-4"></div>
 							</form>
-						</div>
-					</div>
+						</div> <!--row-->
+					</div> <!--well-->
 				</div>
 				<div class="col-md-2">
 				</div>
 			</div>
 		</div>
 	
-	 
-			
+
 
  
 		
