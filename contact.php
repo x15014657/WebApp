@@ -1,59 +1,10 @@
 
-Skip to content
-
-This repository
- 
-Pull requests 
-Issues 
-Gist
- 
-
-
-
-
- Unwatch 
-3 
- Star 
-0 
- Fork 
-0 
-
-x15014657/WebApp 
- Code 
- Issues 0 
- Pull requests 0 
- Projects 0 
- Wiki 
- Pulse 
- Graphs 
- Settings 
-Tree: a8832c812a 
-Find file 
-Copy path
-WebApp/contact.php 
-a8832c8 a day ago 
- CAM2015 updates by Camelia 
-2 contributors 
- 
- 
- 
-Raw
-Blame
-History
-   
-236 lines (196 sloc) 7.11 KB 
 
 <!DOCTYPE html>
 
 <html lang="en">
-
-
-
 <head>
-
 	<title>Music-Zone</title>
-
-
 
 	<meta charset="utf-8">
 
@@ -99,27 +50,7 @@ History
 
 </head>
 
-
-
-
-
 <body>
-
-  <script>
-
-  
-
-    $("#submit").click(function(){
-
-			( "#dialog" ).dialog();
-
-		});
-
- 
-
-  </script>
-
-
 
 	<nav class="navbar navbar-default navbar-fixed-top">
 
@@ -185,7 +116,7 @@ History
 
 			<div class="logo">
 
-				<div><img src="img/vinyl.png" alt="vinyl" class="vinyl" /><img src="img/logo-bird.png" alt="logo-renovation" /><img src="img/vinyl.png" alt="vinyl" class="vinyl" /></div>
+				<div><img src="img/vinyl.png" alt="vinyl" class="vinyl" /><img src="img/logo-bird.png" alt="logo" /><img src="img/vinyl.png" alt="vinyl" class="vinyl" /></div>
 
 			</div>
 
@@ -197,111 +128,9 @@ History
 
 	</div>
 
-			
-
-	<?php
-
-// define variables and set to empty values
-
-$nameErr = $emailErr = $phoneNoErr = $commentErr = "";
-
-$name = $email  = $phoneNo = $comment = "";
-
-
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-  if (empty($_POST["name"])) {
-
-    $nameErr = "Name is required";
-
-  } else {
-
-    $name = test_input($_POST["name"]);
-
-    // check if name only contains letters and whitespace
-
-    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-
-      $nameErr = "Only letters and white space allowed";
-
-    }
-
-  }
-
+	
   
-
-  if (empty($_POST["email"])) {
-
-    $emailErr = "Email is required";
-
-  } else {
-
-    $email = test_input($_POST["email"]);
-
-    // check if e-mail address is well-formed
-
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-
-      $emailErr = "Invalid email format";
-
-    }
-
-  }
-
-    
-
-  if (empty($_POST["phoneNo"])) {
-
-    $phoneNo = "000-0000-0000";
-
-  } else {
-
-    $phoneNo = test_input($_POST["phoneNo"]);
-
-    // check if phone number is valid (this regular expression also allows dashes in the URL)
-
-    if (!preg_match("/^[0-9]{3}-[0-9]{4}-[0-9]{4}$/",$phoneNo)) {
-
-      $websiteErr = "Invalid phone number";
-
-    }
-
-  }
-
-
-
-  if (empty($_POST["comment"])) {
-
-    $comment = "";
-
-  } else {
-
-    $comment = test_input($_POST["comment"]);
-
-  }
-
-}
-
-
-
-function test_input($data) {
-
-  $data = trim($data);
-
-  $data = stripslashes($data);
-
-  $data = htmlspecialchars($data);
-
-  return $data;
-
-}
-
-?>
-
-
-
-
+  
 
 		<div class="container">
 
@@ -319,135 +148,136 @@ function test_input($data) {
 
 								<h3 class="text-centre">Contact us </h3> <hr>
 
-									
-
-									
-
 						</div>
 
 						</div>	
 
 						<div class="row">
 
-							<p><span class="error">* required field.</span></p>
+              <form id="contact-form" method="post" action="contact.php" role="form">
 
-							<form method='post'  name="myForm" class="form-horizontal" action='<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>' >
+    <div class="messages"></div>
 
-								<div class="form-group">
+    <div class="controls">
 
-									<label for="inputName" class="control-label col-sm-2" > *Name:</label>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_name">Firstname *</label>
+                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_lastname">Lastname *</label>
+                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_email">Email *</label>
+                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_phone">Phone</label>
+                    <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_message">Message *</label>
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-success btn-send" value="Send message">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-muted"><strong>*</strong> These fields are required.</p>
+            </div>
+        </div>
+    </div>
 
-										<div class="col-sm-10">
-
-											<input type="text" name='name' size="20" class="form-control" id="inputName" placeholder="Enter name" value='<?php echo $name;?>'>
-
-										</div>
-
-								</div>
-
-								<div class="form-group">
-
-									<label for="inputE-mail" class="control-label col-sm-2">*E-mail:</label>
-
-										<div class="col-sm-10">
-
-											<input type="text" name='email' class="form-control" id="inputE-mail" placeholder="Enter e-mail" value="<?php echo $email;?>">
-
-										</div>
-
-								</div>
-
-								<div class="form-group">
-
-									<label class="control-label col-sm-2" >*Phone no:</label>
-
-										<div class="col-sm-10">
-
-											<input type="number" name='phoneNo' min="1" max="15" class="form-control" id="inputPhoneNumber" placeholder="Enter phone number" value='<?php echo $phoneNo;?>'> >
-
-										</div>
-
-								</div>	
-
-								<div class="form-group">
-
-									<label for="inputMessage" class="control-label col-sm-2">Message:</label>
-
-										<div class="col-sm-10">
-
-											<textarea name='comment' onfocus="thanks();" class="form-control" rows="7" id="inputMessage" placeholder="Enter message"><?php echo $comment;?></textarea>
-
-										</div>
-
-								</div>
-
-								<div class="form-group">
-
-									<div class="col-sm-offset-2 col-sm-10">
-
-										 <button type="submit" name="submit" id="submit" value='submit' class="btn btn-default">Submit</button>
-
+							</form>
+											
 									</div>
 
 								</div>
 
 								
 
-								
-
+	
 								 <div class="col-md-4"></div>
 
-				 <div class="col-md-4">
+				 
+			 	<div class="col-md-4">
+					 <?php
 
-			<div class="well well-sm">
+// configure
+$from = 'Demo contact form <demo@domain.com>';
+$sendTo = 'Demo contact form <demo@domain.com>';
+$subject = 'New message from contact form';
+$fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message'); // array variable name => Text to appear in email
+$okMessage = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
+$errorMessage = 'There was an error while submitting the form. Please try again later';
 
-							<div class="get">
+// let's do the sending
 
-								<div id="dialog" title="Basic dialog">
+try
+{
+    $emailText = "You have new message from contact form\n=============================\n";
 
-											<?php
+    foreach ($_POST as $key => $value) {
+			 
+  
+		echo '<table>';
+		echo '<tr>';
+		echo '<td>';
 
-										if ($nameErr || $emailErr || $phoneNoErr || $commentErr ){
+        if (isset($fields[$key])) {
+            $emailText .= "$fields[$key]: $value\n";
+        }
+    }
 
-										
+    mail($sendTo, $subject, $emailText, "From: " . $from);
 
-											echo $nameErr;
+    $responseArray = array('type' => 'success', 'message' => $okMessage);
+}
+catch (\Exception $e)
+{
+    $responseArray = array('type' => 'danger', 'message' => $errorMessage);
+}
 
-											echo "<br>";
-
-											echo $emailErr;
-
-											echo "<br>";
-
-											echo $phoneNoErr;
-
-											echo "<br>";
-
-											echo $commentErr;
-
-											echo "<br>";
-
-										}
-
-											?>
-
-								</div>
-
-							</div>
-
-								</div> 
-
-					 
-
-				 </div>
-
-			 	<div class="col-md-4"></div>
-
-			
-
-								
-
-							</form>
+if (!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+    $encoded = json_encode($responseArray);
+    
+    header('Content-Type: application/json');
+    
+    echo $encoded;
+}
+else {
+    echo $responseArray['message'];
+		echo '</td>';
+	echo '</tr>';
+	echo '</table>';
+  
+	
+}
+              ?>
+					</div>
 
 						</div>
 
@@ -455,19 +285,40 @@ function test_input($data) {
 
 				</div>
 
-				<div class="col-md-2">
-
-				</div>
-
-			</div>
-
-		</div>
+				
 
 	
+<script>
+	 $(function () {
 
-	 
+    $('#contact-form').validator();
 
-			
+    $('#contact-form').on('submit', function (e) {
+        if (!e.isDefaultPrevented()) {
+            var url = "contact.php";
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: $(this).serialize(),
+                success: function (data)
+                {
+                    var messageAlert = 'alert-' + data.type;
+                    var messageText = data.message;
+
+                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                    if (messageAlert && messageText) {
+                        $('#contact-form').find('.messages').html(alertBox);
+                        $('#contact-form')[0].reset();
+                    }
+                }
+            });
+            return false;
+        }
+    })
+});
+
+</script>	
 
 
 
@@ -514,6 +365,3 @@ function test_input($data) {
 	</body>
 
 </html>
-Contact GitHub API Training Shop Blog About 
-
-© 2016 GitHub, Inc. Terms Privacy Security Status Help 

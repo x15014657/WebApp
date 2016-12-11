@@ -24,6 +24,16 @@
 	</script>
 	<!--<script src="https://apis.google.com/js/platform.js" async defer></script>-->
 	<script src="https://apis.google.com/js/platform.js"></script>
+	<style>
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+		 padding: 8px;
+    text-align:justify;
+    border-bottom: 1px solid #ddd;
+	
+}
+</style>
 </head>
 
 
@@ -100,8 +110,10 @@ foreach ($xml->cd as $cd)
 {  
    
    echo '<div class="col-md-3">';
-   echo $cd['id'], '  ';  
-   
+	echo '<table>';
+		echo '<tr>';
+		echo '<td>';
+   echo $cd['id'], '  ';   
    echo $cd->ARTIST, '  ';  
    echo $cd->COUNTRY, '<br />'; 
    echo $cd->R_LABEL, '  ';  
@@ -109,6 +121,9 @@ foreach ($xml->cd as $cd)
    echo $cd->YEAR, '  ';
    echo '<img class="img-responsive" src="'.$cd->IMAGE.'"/>';
    echo $cd->SUBSCRIBE;
+	echo '</td>';
+	echo '</tr>';
+	echo '</table>';
    echo '</div>';
 }  
 ?>

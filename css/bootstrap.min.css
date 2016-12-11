@@ -13,6 +13,8 @@
 	 padding:30px;
 	 
  }
+tr:hover{background-color:#eb99ff}
+
  @media screen and (min-width: 480px) 
  {
 		body {
